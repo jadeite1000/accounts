@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: jadeite1000/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - jadeite1000-network
+
+  loans:
+    image: jadeite1000/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - jadeite1000-network
+
+  cards:
+    image: jadeite1000/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - jadeite1000-network
+
+networks:
+  jadeite1000-network: null
